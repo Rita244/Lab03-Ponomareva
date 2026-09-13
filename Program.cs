@@ -135,27 +135,50 @@
 // Console.WriteLine();
 // Console.WriteLine("Чётное или нечётное");
 
-// Console.Write("Введите целое число: ");
-// int number = int.Parse(Console.ReadLine());
+// // Console.Write("Введите целое число: ");
+// // int number = int.Parse(Console.ReadLine());
 
-// bool isEven = number % 2 == 0;
+// // bool isEven = number % 2 == 0;
 
-// Console.WriteLine($"Чётное: {isEven}");
+// // Console.WriteLine($"Чётное: {isEven}");
+
+// Console.WriteLine();
+// Console.WriteLine("Инкремент в выражениях");  // x++ сначала возвращает старое значение,
+// // а затем увеличивает x на 1.
+// int x = 5;
+// Console.WriteLine($"x++: {x++}");
+// Console.WriteLine($"После x++: {x}");  // ++x сначала увеличивает x,
+// // а затем возвращает новое значение.
+// x = 5;
+// Console.WriteLine($"++x: {++x}");
+// Console.WriteLine($"После ++x: {x}"); // разница видна при вычислении выражения.
+// x = 5;
+// int resultPostfix = x++ + 10;
+// Console.WriteLine($"x++ + 10 = {resultPostfix}, x = {x}");
+
+// x = 5;
+// int resultPrefix = ++x + 10;
+// Console.WriteLine($"++x + 10 = {resultPrefix}, x = {x}");
 
 Console.WriteLine();
-Console.WriteLine("Инкремент в выражениях");  // x++ сначала возвращает старое значение,
-// а затем увеличивает x на 1.
-int x = 5;
-Console.WriteLine($"x++: {x++}");
-Console.WriteLine($"После x++: {x}");  // ++x сначала увеличивает x,
-// а затем возвращает новое значение.
-x = 5;
-Console.WriteLine($"++x: {++x}");
-Console.WriteLine($"После ++x: {x}"); // разница видна при вычислении выражения.
-x = 5;
-int resultPostfix = x++ + 10;
-Console.WriteLine($"x++ + 10 = {resultPostfix}, x = {x}");
+Console.WriteLine("Задание 3. Калькулятор скидки");
 
-x = 5;
-int resultPrefix = ++x + 10;
-Console.WriteLine($"++x + 10 = {resultPrefix}, x = {x}");
+Console.Write("Введите сумму покупки: ");
+double purchaseAmount = double.Parse(Console.ReadLine());
+
+Console.Write("Есть карта постоянного клиента? (1 - да, 0 - нет): ");
+int cardInput = int.Parse(Console.ReadLine());
+bool hasLoyaltyCard = cardInput == 1;
+
+Console.Write("Введите количество товаров в чеке: ");
+int itemCount = int.Parse(Console.ReadLine());
+
+bool amountAndItemsCondition = purchaseAmount >= 3000 && itemCount >= 3;
+bool eligibleForDiscount = amountAndItemsCondition || hasLoyaltyCard;
+
+Console.WriteLine();
+Console.WriteLine($"Сумма >= 3000: {purchaseAmount >= 3000}");
+Console.WriteLine($"Товаров >= 3: {itemCount >= 3}");
+Console.WriteLine($"Сумма >= 3000 И товаров >= 3: {amountAndItemsCondition}");
+Console.WriteLine($"Есть карта постоянного клиента: {hasLoyaltyCard}");
+Console.WriteLine($"Итоговое право на скидку: {eligibleForDiscount}");
