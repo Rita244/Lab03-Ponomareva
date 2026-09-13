@@ -81,19 +81,53 @@
 // bool logicResult = (5 > 3) && (2 < 4);
 // bool logicResultParens = (5 > 3 && 2 < 4);
 
+// // Console.WriteLine($"5>3 && 2<4 || false   = {logicResult}");
+// // Console.WriteLine($"(5>3 && 2<4) || false   = {logicResultParens}");
+
+// Console.WriteLine();
+// Console.WriteLine("Приоритет операций");
+
+// int resultNoParens = 2 +( 3 * 4);
+// int resiltWithParens = (2 + 3) * 4;
+// Console.WriteLine($"2 + 3 * 4   = {resultNoParens}");
+// Console.WriteLine($"(2 + 3) * 4   = {resiltWithParens}");
+
+// bool logicResult = (5 > 3) && (2 < 4);
+// bool logicResultParens = (5 > 3 && 2 < 4);
+
 // Console.WriteLine($"5>3 && 2<4 || false   = {logicResult}");
 // Console.WriteLine($"(5>3 && 2<4) || false   = {logicResultParens}");
 
 Console.WriteLine();
-Console.WriteLine("Приоритет операций");
+Console.WriteLine("Приёмная комиссия");
 
-int resultNoParens = 2 +( 3 * 4);
-int resiltWithParens = (2 + 3) * 4;
-Console.WriteLine($"2 + 3 * 4   = {resultNoParens}");
-Console.WriteLine($"(2 + 3) * 4   = {resiltWithParens}");
+Console.Write("Введите средний балл аттестата: ");
+double averageGrade = double.Parse(Console.ReadLine());
 
-bool logicResult = (5 > 3) && (2 < 4);
-bool logicResultParens = (5 > 3 && 2 < 4);
+Console.Write("Введите баллы за экзамен (0-100): ");
+int examScore = int.Parse(Console.ReadLine());
 
-Console.WriteLine($"5>3 && 2<4 || false   = {logicResult}");
-Console.WriteLine($"(5>3 && 2<4) || false   = {logicResultParens}");
+Console.Write("Есть льгота? (1 - да, 0 - нет): ");
+int benefitInput = int.Parse(Console.ReadLine());
+bool hasBenefit = (benefitInput == 1);
+
+// TODO 1
+bool hasGoodCertificate = averageGrade >= 4.0;
+
+// TODO 2
+bool hasGoodExam = examScore >= 60;
+
+// TODO 3
+bool isEligibleByRules = (hasGoodCertificate && hasGoodExam) || hasBenefit;
+
+// TODO 4
+double totalScore = averageGrade * 10;
+totalScore += examScore;
+
+Console.WriteLine();
+Console.WriteLine("Результат");
+Console.WriteLine($"Хороший аттестат (>= 4.0): {hasGoodCertificate}");
+Console.WriteLine($"Хороший экзамен (>= 60): {hasGoodExam}");
+Console.WriteLine($"Льгота: {hasBenefit}");
+Console.WriteLine($"Проходит по правилам: {isEligibleByRules}");
+Console.WriteLine($"Итоговый балл: {totalScore}");
