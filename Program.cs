@@ -32,102 +32,112 @@
 // Console.WriteLine("Практическая ловушка");
 
 // int attempts = 0;
-// Console.WriteLine($"Попытка № {++attempts}");
-// Console.WriteLine($"Попытка № {++attempts}");
-// Console.WriteLine($"Всего попыток: {++attempts}");
+// // Console.WriteLine($"Попытка № {++attempts}");
+// // Console.WriteLine($"Попытка № {++attempts}");
+// // Console.WriteLine($"Всего попыток: {++attempts}");
 
-// Console.WriteLine();
-// Console.WriteLine($"Операторы сравнения");
+// // Console.WriteLine();
+// // Console.WriteLine($"Операторы сравнения");
 
-// double myGrade = 4.6;
-// double passingGrade = 4.0;
-// int myAge = 20;
-// int votingAge = 18;
-// bool isPassing = myGrade >= passingGrade;
-// bool isExactAge = myAge == votingAge;
-// bool canVote = myAge >= votingAge;
-// bool isNotFailing = myAge != 2.0;
+// // double myGrade = 4.6;
+// // double passingGrade = 4.0;
+// // int myAge = 20;
+// // int votingAge = 18;
+// // bool isPassing = myGrade >= passingGrade;
+// // bool isExactAge = myAge == votingAge;
+// // bool canVote = myAge >= votingAge;
+// // bool isNotFailing = myAge != 2.0;
 
-// Console.WriteLine($"Балл: {myGrade} >= {passingGrade}: {isPassing}");
-// Console.WriteLine($"Возраст: {myAge} == {votingAge}: {isExactAge}");
-// Console.WriteLine($"Возраст: {myAge} >= {votingAge} (может голосовать): {canVote}");
-// Console.WriteLine($"Балл: {myGrade} != 2.0 (не двойка): {isNotFailing}");
-
-
-// Console.WriteLine();
-// Console.WriteLine("Логичекие операторы");
-
-// bool hasPassingGrade = true;
-// bool hasAttendane = false;
-// bool hasDebt = true;
-
-// bool canGetScholarship = hasPassingGrade && hasAttendane;
-// bool canRetakeExam = hasPassingGrade || hasAttendane;
-// bool isDebtFree = !hasDebt;
-
-// Console.WriteLine($"Может получить стипендию (оценка и посещаемость): {canGetScholarship}");
-// Console.WriteLine($"Может пересдать (оценка ИЛИ посещаемость): {canGetScholarship}");
-// Console.WriteLine($"Нет долгов: {isDebtFree}");
+// // Console.WriteLine($"Балл: {myGrade} >= {passingGrade}: {isPassing}");
+// // Console.WriteLine($"Возраст: {myAge} == {votingAge}: {isExactAge}");
+// // Console.WriteLine($"Возраст: {myAge} >= {votingAge} (может голосовать): {canVote}");
+// // Console.WriteLine($"Балл: {myGrade} != 2.0 (не двойка): {isNotFailing}");
 
 
-// Console.WriteLine();
-// Console.WriteLine("Приоритет операций");
+// // Console.WriteLine();
+// // Console.WriteLine("Логичекие операторы");
 
-// int resultNoParens = 2 +( 3 * 4);
-// int resiltWithParens = (2 + 3) * 4;
-// Console.WriteLine($"2 + 3 * 4   = {resultNoParens}");
-// Console.WriteLine($"(2 + 3) * 4   = {resiltWithParens}");
+// // bool hasPassingGrade = true;
+// // bool hasAttendane = false;
+// // bool hasDebt = true;
 
-// bool logicResult = (5 > 3) && (2 < 4);
-// bool logicResultParens = (5 > 3 && 2 < 4);
+// // bool canGetScholarship = hasPassingGrade && hasAttendane;
+// // bool canRetakeExam = hasPassingGrade || hasAttendane;
+// // bool isDebtFree = !hasDebt;
+
+// // Console.WriteLine($"Может получить стипендию (оценка и посещаемость): {canGetScholarship}");
+// // Console.WriteLine($"Может пересдать (оценка ИЛИ посещаемость): {canGetScholarship}");
+// // Console.WriteLine($"Нет долгов: {isDebtFree}");
+
+
+// // Console.WriteLine();
+// // Console.WriteLine("Приоритет операций");
+
+// // int resultNoParens = 2 +( 3 * 4);
+// // int resiltWithParens = (2 + 3) * 4;
+// // Console.WriteLine($"2 + 3 * 4   = {resultNoParens}");
+// // Console.WriteLine($"(2 + 3) * 4   = {resiltWithParens}");
+
+// // bool logicResult = (5 > 3) && (2 < 4);
+// // bool logicResultParens = (5 > 3 && 2 < 4);
+
+// // // Console.WriteLine($"5>3 && 2<4 || false   = {logicResult}");
+// // // Console.WriteLine($"(5>3 && 2<4) || false   = {logicResultParens}");
+
+// // Console.WriteLine();
+// // Console.WriteLine("Приоритет операций");
+
+// // int resultNoParens = 2 +( 3 * 4);
+// // int resiltWithParens = (2 + 3) * 4;
+// // Console.WriteLine($"2 + 3 * 4   = {resultNoParens}");
+// // Console.WriteLine($"(2 + 3) * 4   = {resiltWithParens}");
+
+// // bool logicResult = (5 > 3) && (2 < 4);
+// // bool logicResultParens = (5 > 3 && 2 < 4);
 
 // // Console.WriteLine($"5>3 && 2<4 || false   = {logicResult}");
 // // Console.WriteLine($"(5>3 && 2<4) || false   = {logicResultParens}");
 
 // Console.WriteLine();
-// Console.WriteLine("Приоритет операций");
+// Console.WriteLine("Приёмная комиссия");
 
-// int resultNoParens = 2 +( 3 * 4);
-// int resiltWithParens = (2 + 3) * 4;
-// Console.WriteLine($"2 + 3 * 4   = {resultNoParens}");
-// Console.WriteLine($"(2 + 3) * 4   = {resiltWithParens}");
+// Console.Write("Введите средний балл аттестата: ");
+// double averageGrade = double.Parse(Console.ReadLine());
 
-// bool logicResult = (5 > 3) && (2 < 4);
-// bool logicResultParens = (5 > 3 && 2 < 4);
+// Console.Write("Введите баллы за экзамен (0-100): ");
+// int examScore = int.Parse(Console.ReadLine());
 
-// Console.WriteLine($"5>3 && 2<4 || false   = {logicResult}");
-// Console.WriteLine($"(5>3 && 2<4) || false   = {logicResultParens}");
+// Console.Write("Есть льгота? (1 - да, 0 - нет): ");
+// int benefitInput = int.Parse(Console.ReadLine());
+// bool hasBenefit = (benefitInput == 1);
 
-Console.WriteLine();
-Console.WriteLine("Приёмная комиссия");
+// // TODO 1
+// bool hasGoodCertificate = averageGrade >= 4.0;
 
-Console.Write("Введите средний балл аттестата: ");
-double averageGrade = double.Parse(Console.ReadLine());
+// // TODO 2
+// bool hasGoodExam = examScore >= 60;
 
-Console.Write("Введите баллы за экзамен (0-100): ");
-int examScore = int.Parse(Console.ReadLine());
+// // TODO 3
+// bool isEligibleByRules = (hasGoodCertificate && hasGoodExam) || hasBenefit;
 
-Console.Write("Есть льгота? (1 - да, 0 - нет): ");
-int benefitInput = int.Parse(Console.ReadLine());
-bool hasBenefit = (benefitInput == 1);
+// // TODO 4
+// double totalScore = averageGrade * 10;
+// totalScore += examScore;
 
-// TODO 1
-bool hasGoodCertificate = averageGrade >= 4.0;
-
-// TODO 2
-bool hasGoodExam = examScore >= 60;
-
-// TODO 3
-bool isEligibleByRules = (hasGoodCertificate && hasGoodExam) || hasBenefit;
-
-// TODO 4
-double totalScore = averageGrade * 10;
-totalScore += examScore;
+// Console.WriteLine();
+// Console.WriteLine("Результат");
+// Console.WriteLine($"Хороший аттестат (>= 4.0): {hasGoodCertificate}");
+// Console.WriteLine($"Хороший экзамен (>= 60): {hasGoodExam}");
+// Console.WriteLine($"Льгота: {hasBenefit}");
+// Console.WriteLine($"Проходит по правилам: {isEligibleByRules}");
+// Console.WriteLine($"Итоговый балл: {totalScore}");
 
 Console.WriteLine();
-Console.WriteLine("Результат");
-Console.WriteLine($"Хороший аттестат (>= 4.0): {hasGoodCertificate}");
-Console.WriteLine($"Хороший экзамен (>= 60): {hasGoodExam}");
-Console.WriteLine($"Льгота: {hasBenefit}");
-Console.WriteLine($"Проходит по правилам: {isEligibleByRules}");
-Console.WriteLine($"Итоговый балл: {totalScore}");
+Console.WriteLine("Чётное или нечётное");
+
+Console.Write("Введите целое число: ");
+int number = int.Parse(Console.ReadLine());
+
+bool isEven = number % 2 == 0;
+
+Console.WriteLine($"Чётное: {isEven}");
