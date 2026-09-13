@@ -130,14 +130,32 @@
 // Console.WriteLine($"Хороший экзамен (>= 60): {hasGoodExam}");
 // Console.WriteLine($"Льгота: {hasBenefit}");
 // Console.WriteLine($"Проходит по правилам: {isEligibleByRules}");
-// Console.WriteLine($"Итоговый балл: {totalScore}");
+// // Console.WriteLine($"Итоговый балл: {totalScore}");
+
+// Console.WriteLine();
+// Console.WriteLine("Чётное или нечётное");
+
+// Console.Write("Введите целое число: ");
+// int number = int.Parse(Console.ReadLine());
+
+// bool isEven = number % 2 == 0;
+
+// Console.WriteLine($"Чётное: {isEven}");
 
 Console.WriteLine();
-Console.WriteLine("Чётное или нечётное");
+Console.WriteLine("Инкремент в выражениях");  // x++ сначала возвращает старое значение,
+// а затем увеличивает x на 1.
+int x = 5;
+Console.WriteLine($"x++: {x++}");
+Console.WriteLine($"После x++: {x}");  // ++x сначала увеличивает x,
+// а затем возвращает новое значение.
+x = 5;
+Console.WriteLine($"++x: {++x}");
+Console.WriteLine($"После ++x: {x}"); // разница видна при вычислении выражения.
+x = 5;
+int resultPostfix = x++ + 10;
+Console.WriteLine($"x++ + 10 = {resultPostfix}, x = {x}");
 
-Console.Write("Введите целое число: ");
-int number = int.Parse(Console.ReadLine());
-
-bool isEven = number % 2 == 0;
-
-Console.WriteLine($"Чётное: {isEven}");
+x = 5;
+int resultPrefix = ++x + 10;
+Console.WriteLine($"++x + 10 = {resultPrefix}, x = {x}");
