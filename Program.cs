@@ -36,35 +36,53 @@
 // Console.WriteLine($"Попытка № {++attempts}");
 // Console.WriteLine($"Всего попыток: {++attempts}");
 
+// Console.WriteLine();
+// Console.WriteLine($"Операторы сравнения");
+
+// double myGrade = 4.6;
+// double passingGrade = 4.0;
+// int myAge = 20;
+// int votingAge = 18;
+// bool isPassing = myGrade >= passingGrade;
+// bool isExactAge = myAge == votingAge;
+// bool canVote = myAge >= votingAge;
+// bool isNotFailing = myAge != 2.0;
+
+// Console.WriteLine($"Балл: {myGrade} >= {passingGrade}: {isPassing}");
+// Console.WriteLine($"Возраст: {myAge} == {votingAge}: {isExactAge}");
+// Console.WriteLine($"Возраст: {myAge} >= {votingAge} (может голосовать): {canVote}");
+// Console.WriteLine($"Балл: {myGrade} != 2.0 (не двойка): {isNotFailing}");
+
+
+// Console.WriteLine();
+// Console.WriteLine("Логичекие операторы");
+
+// bool hasPassingGrade = true;
+// bool hasAttendane = false;
+// bool hasDebt = true;
+
+// bool canGetScholarship = hasPassingGrade && hasAttendane;
+// bool canRetakeExam = hasPassingGrade || hasAttendane;
+// bool isDebtFree = !hasDebt;
+
+// Console.WriteLine($"Может получить стипендию (оценка и посещаемость): {canGetScholarship}");
+// Console.WriteLine($"Может пересдать (оценка ИЛИ посещаемость): {canGetScholarship}");
+// Console.WriteLine($"Нет долгов: {isDebtFree}");
+
 Console.WriteLine();
-Console.WriteLine($"Операторы сравнения");
+Console.WriteLine("Короткое замыкание");
 
-double myGrade = 4.6;
-double passingGrade = 4.0;
-int myAge = 20;
-int votingAge = 18;
-bool isPassing = myGrade >= passingGrade;
-bool isExactAge = myAge == votingAge;
-bool canVote = myAge >= votingAge;
-bool isNotFailing = myAge != 2.0;
+bool CheckAndPrint(string label, bool value)
+{
+    Console.WriteLine($" Вычисляется: {label}");
+    return value;
+}
 
-Console.WriteLine($"Балл: {myGrade} >= {passingGrade}: {isPassing}");
-Console.WriteLine($"Возраст: {myAge} == {votingAge}: {isExactAge}");
-Console.WriteLine($"Возраст: {myAge} >= {votingAge} (может голосовать): {canVote}");
-Console.WriteLine($"Балл: {myGrade} != 2.0 (не двойка): {isNotFailing}");
-
+Console.WriteLine("Проверяем && (первый операнд false):");
+bool resultAnd = CheckAndPrint("A", false) && CheckAndPrint("B", true);
+Console.WriteLine($"Результат: {resultAnd}");
 
 Console.WriteLine();
-Console.WriteLine("Логичекие операторы");
-
-bool hasPassingGrade = true;
-bool hasAttendane = false;
-bool hasDebt = true;
-
-bool canGetScholarship = hasPassingGrade && hasAttendane;
-bool canRetakeExam = hasPassingGrade || hasAttendane;
-bool isDebtFree = !hasDebt;
-
-Console.WriteLine($"Может получить стипендию (оценка и посещаемость): {canGetScholarship}");
-Console.WriteLine($"Может пересдать (оценка ИЛИ посещаемость): {canGetScholarship}");
-Console.WriteLine($"Нет долгов: {isDebtFree}");
+Console.WriteLine("Проверяем || (первый операнд true)");
+bool resultOr = CheckAndPrint("C", true) || CheckAndPrint("D", false);
+Console.WriteLine($"Результат: {resultOr}");
